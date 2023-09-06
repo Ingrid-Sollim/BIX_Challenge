@@ -1,0 +1,32 @@
+{
+    "name": "daily_update",
+    "properties": {
+        "annotations": [],
+        "runtimeState": "Stopped",
+        "pipelines": [
+            {
+                "pipelineReference": {
+                    "referenceName": "challenge",
+                    "type": "PipelineReference"
+                }
+            }
+        ],
+        "type": "ScheduleTrigger",
+        "typeProperties": {
+            "recurrence": {
+                "frequency": "Day",
+                "interval": 1,
+                "startTime": "2023-06-20T17:48:00Z",
+                "timeZone": "UTC",
+                "schedule": {
+                    "minutes": [
+                        30
+                    ],
+                    "hours": [
+                        14
+                    ]
+                }
+            }
+        }
+    }
+}

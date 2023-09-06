@@ -1,0 +1,73 @@
+{
+    "name": "challenge",
+    "properties": {
+        "activities": [
+            {
+                "name": "Extract_API",
+                "type": "DatabricksNotebook",
+                "dependsOn": [],
+                "policy": {
+                    "timeout": "0.12:00:00",
+                    "retry": 0,
+                    "retryIntervalInSeconds": 30,
+                    "secureOutput": false,
+                    "secureInput": false
+                },
+                "userProperties": [],
+                "typeProperties": {
+                    "notebookPath": "/Users/ingrid.sollim@blueshift.com.br/read_API"
+                },
+                "linkedServiceName": {
+                    "referenceName": "ls_challenge_databricks",
+                    "type": "LinkedServiceReference"
+                }
+            },
+            {
+                "name": "Extract_google_Storage",
+                "type": "DatabricksNotebook",
+                "dependsOn": [],
+                "policy": {
+                    "timeout": "0.12:00:00",
+                    "retry": 0,
+                    "retryIntervalInSeconds": 30,
+                    "secureOutput": false,
+                    "secureInput": false
+                },
+                "userProperties": [],
+                "typeProperties": {
+                    "notebookPath": "/Users/ingrid.sollim@blueshift.com.br/read_parquet"
+                },
+                "linkedServiceName": {
+                    "referenceName": "ls_challenge_databricks",
+                    "type": "LinkedServiceReference"
+                }
+            },
+            {
+                "name": "Extract_Postgres",
+                "type": "DatabricksNotebook",
+                "dependsOn": [],
+                "policy": {
+                    "timeout": "0.12:00:00",
+                    "retry": 0,
+                    "retryIntervalInSeconds": 30,
+                    "secureOutput": false,
+                    "secureInput": false
+                },
+                "userProperties": [],
+                "typeProperties": {
+                    "notebookPath": "/Users/ingrid.sollim@blueshift.com.br/read_postgres"
+                },
+                "linkedServiceName": {
+                    "referenceName": "ls_challenge_databricks",
+                    "type": "LinkedServiceReference"
+                }
+            }
+        ],
+        "folder": {
+            "name": "ingrid-sollim"
+        },
+        "annotations": [],
+        "lastPublishTime": "2023-06-20T15:28:39Z"
+    },
+    "type": "Microsoft.DataFactory/factories/pipelines"
+}
